@@ -1,7 +1,73 @@
+body {
+  overflow-x: hidden;
+}
+
+.footer_bg {
+  position: absolute;
+  background: url("https://www.pngitem.com/pimgs/m/328-3280067_city-footer-png-download-real-estate-footer-background.png")
+    no-repeat scroll center 0;
+
+  bottom: 0;
+  width: 100%;
+  height: 266px;
+}
+
+.footer_bg .footer_bg_one {
+  background: url("/src/running.gif") no-repeat center center;
+  width: 300px;
+  height: 157px;
+  background-size: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  -webkit-animation: myfirst 22s linear infinite;
+  animation: myfirst 22s linear infinite;
+}
+
+.footer_bg .footer_bg_two {
+  background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif")
+    no-repeat center center;
+  width: 88px;
+  height: 100px;
+  background-size: 100%;
+  bottom: 0;
+  left: 38%;
+  position: absolute;
+  -webkit-animation: myfirst 30s linear infinite;
+  animation: myfirst 30s linear infinite;
+}
+
+@-moz-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
 .menu {
   position: relative;
-  width: 500px;
-  height: 500px;
+  width: 550px;
+  height: 550px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,31 +76,32 @@
   position: absolute;
   left: 0;
   list-style: none;
-  transform-origin: 250px;
+  transform-origin: 275px;
   transition: 0.5s;
   transition-delay: calc(0.1s * var(--i));
-  transform: rotate(0deg) translateX(250px);
+  transform: rotate(0deg) translateX(275px);
 }
 
 .menu.active li {
-  transform: rotate(calc(360deg / 6 * var(--i)));
+  transform: rotate(calc(360deg / 5 * var(--i) + 18deg));
 }
 
 .menu li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   background: white;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   border-radius: 50%;
-  transform: rotate(calc(360deg / -6 * var(--i)));
+  transform: rotate(calc(360deg / -5 * var(--i) - 18deg));
 }
 
 .toggle {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   background: white;
   display: flex;
   justify-content: center;
